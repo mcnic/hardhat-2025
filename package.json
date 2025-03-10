@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "hardhat test",
+    "server": "hardhat node",
     "compile": "hardhat compile",
-    "deploy": "hardhat ignition deploy ./ignition/modules/Inbox.js --network sepolia"
+    "deploy": "hardhat ignition deploy ./ignition/modules/Lottery.js"
   },
   "author": "",
   "license": "ISC",
