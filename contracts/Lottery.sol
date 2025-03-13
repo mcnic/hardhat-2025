@@ -11,7 +11,7 @@ contract Lottery {
     }
 
     function enter() public payable {
-        require(msg.value >= 1000 wei);
+        require(msg.value >= 1000 wei, 'Min value is 1000 wei');
         players.push(msg.sender);
     }
 
@@ -30,7 +30,7 @@ contract Lottery {
     }
 
     modifier restricted() {
-        require(msg.sender == manager);
+        require(msg.sender == manager, 'This method allow only by creator');
         _;
     }
 
